@@ -5,7 +5,7 @@ A FullStackAPI első vizsga gyakorlati megoldásai.
 - Forkold le magadnak ezt a repo -t.
 - Öt önállóan megoldható feladat van benne. Ezeket egymástól függetlenül kell 
 megoldanod.
-- Az `npm i` parancsot futtasd le minden mappában, mielőtt megkezded a munkát.
+- ~~Az `npm i` parancsot futtasd le minden mappában, mielőtt megkezded a munkát.~~
 - Nem lesz mappánként külön README.md fájl, a feladatokat az adott fájlokban, 
 kommentben találod meg. 
 __A SZÁMOZOTT FELADATOKAT KERESD!!!__
@@ -17,9 +17,9 @@ Mappánként megtalálod az indító fájlt és a custom modulokat. A konkrét f
 mindig az indító fájl node általi futtatásával tudod tesztelni:
 - __task-01__ test.js -> modulok: fn.js
 - __task-02__ start.js -> modulok: reader.js
-- __task-01__ index.js -> modulok: jsonHandler.js
-- __task-01__ server.js -> modulok: jsonDB.js
-- __task-01__ app.js -> modulok: router/countryRouter.js, 
+- __task-03__ index.js -> modulok: jsonHandler.js
+- __task-04__ server.js -> modulok: jsonDB.js
+- __task-05__ app.js -> modulok: router/countryRouter.js, 
 controller/countryController.js, db/db.js
 
 ## Sok sikert!

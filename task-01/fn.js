@@ -29,7 +29,7 @@ const create = (list = [], entity = {}) => {
  * @returns a frissített objektum ha sikerült a frissítés, egyébként false
  */
 
-const findIndexByID = (list, id) => list.findIndex(item => item.id === id);
+const findIndexByID = (arr, id) => arr.findIndex(item => item.id === id);
 
 const update = (list = [], entity = {}) => {
     if (list.length < 1 || !entity.id) {

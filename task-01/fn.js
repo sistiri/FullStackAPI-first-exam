@@ -15,7 +15,8 @@ const get = (list = [], id = 0) => {
  * @returns a létrehozott, beszúrt és id -vel ellátott objektum
  */
 const create = (list = [], entity = {}) => {
-    const id = list[list.length - 1].id + 1;
+    const sortedList = list.sort((a, b) => a.id - b.id);
+    const id = sortedList[sortedList.length - 1].id + 1;
     const newEntity = { ...entity, id };
     list.push(newEntity);
     return newEntity;
@@ -33,6 +34,9 @@ const update = (list = [], entity = {}) => {
     }
 
     const index = list.findIndex(item => item.id === entity.id);
+    if (index < 0) {
+        return false
+      }
     list[index] = { ...list[index], ...entity };
     return list[index];
 };
@@ -49,6 +53,9 @@ const remove = (list = [], id = 0) => {
     }
 
     const index = list.findIndex(item => item.id === id);
+    if (index < 0) {
+        return false
+      }
     list.splice(index, 1);
     return true;
 };

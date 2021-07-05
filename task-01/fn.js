@@ -14,8 +14,12 @@ const get = (list = [], id = 0) => {
  * @param {*} entity egy objektum, amelyet be szeretnénk szúrni a tömbbe
  * @returns a létrehozott, beszúrt és id -vel ellátott objektum
  */
-const create = (list = [], entity = null) => {
-    //
+
+const create = (list = [], entity = {}) => {
+    const id = list[list.length - 1].id + 1;
+    const newEntity = {...entity, id};
+    list.push( newEntity );
+    return newEntity;
 };
 
 /**

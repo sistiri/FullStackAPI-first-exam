@@ -28,12 +28,15 @@ const create = (list = [], entity = {}) => {
  * @param {*} entity egy id tulajdonsággal rendelkező objektum
  * @returns a frissített objektum ha sikerült a frissítés, egyébként false
  */
+
+const findIndexByID = (list, id) => list.findIndex(item => item.id === id);
+
 const update = (list = [], entity = {}) => {
     if (list.length < 1 || !entity.id) {
         return false;
     }
 
-    const index = list.findIndex(item => item.id === entity.id);
+    const index = findIndexByID(list, entity.id);
     if (index < 0) {
         return false
       }
@@ -52,7 +55,7 @@ const remove = (list = [], id = 0) => {
         return false;
     }
 
-    const index = list.findIndex(item => item.id === id);
+    const index = findIndexByID(list, id)
     if (index < 0) {
         return false
       }

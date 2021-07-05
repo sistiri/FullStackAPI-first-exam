@@ -2,12 +2,12 @@
  * 1. A fájlok kezeléséhez az fs modul promise alapú verzióját használd.
  */
 const fsp = require('fs').promises;
-const { join } = require('path');
 
 /**
  * 2. Állítsd be az azonos mappában található .json fájl elérési útját a path 
  * modul join metódusának segítségével.
  */
+const { join } = require('path');
 const jsonPath = join(__dirname, 'db', 'products.json');
 
 /**

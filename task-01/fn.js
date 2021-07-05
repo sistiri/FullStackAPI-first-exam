@@ -5,7 +5,7 @@
  * @returns a tömbnek az az eleme, amelynek az id -je megegyezik a kapottal
  */
 const get = (list = [], id = 0) => {
-    //
+    return list.find( item => item.id === id );
 };
 
 /**
